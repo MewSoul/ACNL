@@ -1,0 +1,60 @@
+<h3 style="margin-top: 30px">Messagerie</h3>
+
+<div>
+  <a href="/conversations/new" class="btn btn-large btn-primary">Nouvelle conversation</a>
+</div>
+
+<h3 style="margin-top: 20px">Messages reçus</h3>
+
+<table class="table table-bordered table-hover span8" style="table-layout: fixed; word-wrap: break-word; margin: 0 auto; float: none; background:white">
+<tr>
+  <th>De</th>
+  <th>Sujet</th>
+</tr>
+<tbody>
+<% current_user.mailbox.inbox.each do |m| %>
+<div>
+  <tr>
+    <td><% tab = m.participants.select {|f| f["name"] != current_user.name } %>
+      <% if tab.first %>
+      <%= tab.first.name %>
+      <% else %>
+      ???
+      <% end %>
+    </td>
+    <td>
+      <%= link_to m.subject, m %>
+      <% if m.is_unread?(current_user) %>
+      <strong style="color:red">(Nouveau message)</strong>
+      <% end %>
+    </td>
+  </tr>
+</div>
+<% end %>
+</tbody>
+</table>
+
+<h3>Messages envoyés</h3>
+
+<table class="table table-bordered table-hover span8" style="table-layout: fixed; word-wrap: break-word; margin: 0 auto; float: none; background: white">
+<tr>
+  <th>A</th>
+  <th>Sujet</th>
+</tr>
+<tbody>
+<% current_user.mailbox.sentbox.each do |m| %>
+<div>
+  <tr>
+    <td><% tab = m.participants.select {|f| f["name"] != current_user.name } %>
+      <% if tab.first %>
+      <%= tab.first.name %>
+      <% else %>
+      ???
+      <% end %>
+    </td>
+    <td><%= link_to m.subject, m %></td>
+  </tr>
+</div>
+<% end %>
+</tbody>
+</table>

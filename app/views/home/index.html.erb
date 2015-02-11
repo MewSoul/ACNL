@@ -1,0 +1,38 @@
+<div style="border-style:solid; border-width: 1px; margin: 0 auto; float:none; margin-top: 30px; padding: 10px; border-radius: 4px; background: white; border-color: #dddddd" class="span8">
+  <p style="color: red"><strong>Nouveau: Apparition des listes des insectes/poissons/crustacés, avec les périodes et endroits où on peut les trouver, et vous pouvez également noter ceux que vous avez capturés afin de savoir ce qu'il vous reste à avoir ;)</strong></p>
+  <% if user_signed_in? %>
+<p style="text-align: center">Etat actuel de vos portes : <strong><%= current_user.open ? "Ouvertes" : "Fermées" %></strong></p>
+<% end %>
+  <p>Afin d'ouvrir vos portes, cochez la case dans votre profil !</p>
+  Pour tous problèmes, bugs ou suggestions, merci de bien vouloir le signaler à mewsoul.acnl@gmail.com, merci ! (:
+</div>
+
+<h3 style="text-align: center; margin-top: 30px;">Portes des villes</h3>
+<table class="table table-bordered table-hover span12" style="table-layout: fixed; word-wrap: break-word; margin: 0 auto; float: none; background:white;">
+  <tr>
+    <th class="span2">Pseudo</th>
+    <th class="span2">Ville</th>
+    <th class="span3">Code Ami</th>
+    <th class="span2">Status</th>
+    <th>Message</th>
+  </tr>
+  <tbody>
+  <% @users.each do |user| %>
+  <div style="white-space: normal">
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.city %></td>
+      <td><%= user.codeami %></td>
+      <% if user.open? %>
+      <td style="color: green; font-weight: bold;">Ouvert</td>
+      <% else %>
+      <td style="color: red; font-weight: bold;">Fermé</td>
+      <% end %>
+      <td> <%= user.text %></td>
+    </tr>
+    </div>
+  <% end %>
+  </tbody>
+  </table>
+
+<script language="javascript" type="text/javascript">setTimeout("location.reload();", 60000);</script>

@@ -1,0 +1,49 @@
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  <%= devise_error_messages! %>
+  <div id="wrap" style="padding-left: 75px">
+    <div class="span3" id="left">
+      <div>Pseudo<br/>
+	<%= f.text_field :name %>
+      </div>
+
+      <div>Ville<br/>
+	<%= f.text_field :city %>
+      </div>
+
+      <div>Code ami<br/>
+	<%= f.text_field :codeami %>
+      </div>
+
+      <div><br /><%= f.check_box :open %> Ouvrir/Fermer mes portes<br /><br/>
+      </div>
+
+      <div>Message<br/>
+	<%= f.text_area(:text, :size => "50x6", :maxlength => "140") %>
+      </div>
+    </div>
+
+    <div class="span3" id="right">
+      <div>Email<br/>
+	<%= f.email_field :email %>
+      </div>
+
+      <div>Nouveau mot de passe<br/>
+	<%= f.password_field :password, :autocomplete => "off" %>
+      </div>
+
+      <div>Confirmer le mot de passe<br/>
+	<%= f.password_field :password_confirmation %>
+      </div>
+
+      <div>Mot de passe actuel<br/>
+	<%= f.password_field :current_password %>
+      </div>
+    </div>
+
+    <div style="margin-top: 335px;">
+      <input class="btn btn-primary" name="commit" type="submit" value="Mettre a jour">
+      <a href="/" class="btn">Retour</a>
+    </div>
+  </div>
+
+<% end %>

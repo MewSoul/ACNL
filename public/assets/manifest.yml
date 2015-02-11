@@ -1,0 +1,14 @@
+---
+background.jpg: background.jpg
+logo.png: logo.png
+rails.png: rails.png
+wp.jpg: wp.jpg
+application.js: application.js
+application.css: application.css
+fontawesome-webfont.eot: fontawesome-webfont.eot
+fontawesome-webfont.svg: fontawesome-webfont.svg
+fontawesome-webfont.ttf: fontawesome-webfont.ttf
+fontawesome-webfont.woff: fontawesome-webfont.woff
+twitter/bootstrap/glyphicons-halflings-white.png: twitter/bootstrap/glyphicons-halflings-white.png
+twitter/bootstrap/glyphicons-halflings.png: twitter/bootstrap/glyphicons-halflings.png
+jquery.min.map: jquery.min.map

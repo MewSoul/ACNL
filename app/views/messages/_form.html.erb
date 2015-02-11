@@ -1,0 +1,8 @@
+<%= simple_form_for :message, url: [:reply, conversation] do |f|  %>
+<div class="input string required message_body">
+  <label class="string required" for="message_body"></label>
+  <textarea class="string required span8" id="message_body" name="message[body]" required="required" style="height: 100px"></textarea>
+</div>
+<input class="button btn btn-primary" name="commit" type="submit" value="Envoyer">
+<%= submit_tag 'Annuler', type: :reset, class: 'btn btn-danger' %>
+<% end %>

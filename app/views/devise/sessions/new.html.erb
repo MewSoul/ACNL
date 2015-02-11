@@ -1,0 +1,25 @@
+<h3 style="margin-top: 50px">S'identifier</h3>
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+
+<div>
+  Email<br /> <%= f.text_field :email %>
+</div>
+
+<div>
+  Mot de passe<br /> <%= f.password_field :password %>
+</div>
+
+<% if devise_mapping.rememberable? %>
+<div>
+  <%= f.check_box :remember_me %>
+  Se souvenir de moi
+</div>
+<% end %>
+
+<div style="margin-top:35px">
+  <input class="btn btn-primary" name="commit" type="submit" value="Valider">
+  <% if devise_mapping.recoverable? && controller_name != 'passwords' %>
+  <%= link_to "Mot de passe oublié ?", new_password_path(resource_name), :class => "btn" %>
+  <% end %>
+</div>
+<% end %>

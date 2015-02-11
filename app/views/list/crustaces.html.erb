@@ -1,0 +1,295 @@
+<% if user_signed_in? %>
+
+<%= form_for @users, method: :put do |f| %>
+
+<h3 style="text-align: center; margin-top: 30px;">Crustaces</h3>
+<table class="table table-bordered table-hover span12" style="table-layout: fixed; word-wrap: break-word; margin: 0 auto; float: none; background:white;">
+
+  <tr>
+    <th>Attrapé</th>
+    <th>Nom</th>
+    <th>Endroit</th>
+    <th>Mois</th>
+    <th>Heures</th>
+    <th>Prix</th>
+  </tr>
+
+  <tbody>
+    <tr>
+      <td style="text-align:center"><%= f.check_box :anemone %></td>
+      <td>Anemone de Mer</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>100</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :anguillejardin %></td>
+      <td>Anguille de Jardin</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>600</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :balane %></td>
+      <td>Balane</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>200</td>
+    </tr>
+    
+    <tr>
+      <td style="text-align:center"><%= f.check_box :bathynome %></td>
+      <td>Bathynome</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>9000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :concombremer %></td>
+      <td>Concombre de Mer</td>
+      <td>Ocean</td>
+      <td>Nov-Avr</td>
+      <td>Toute la journee</td>
+      <td>150</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :coquillecornes %></td>
+      <td>Coquille a cornes</td>
+      <td>Ocean</td>
+      <td>Aout-Mai</td>
+      <td>16h-9h</td>
+      <td>300</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :crabearaignee %></td>
+      <td>Crabe araignee</td>
+      <td>Ocean</td>
+      <td>Mars-Avr</td>
+      <td>Toute la journee</td>
+      <td>10000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :crabecrin %></td>
+      <td>Crabe Crin</td>
+      <td>Ocean</td>
+      <td>Nov-Avr</td>
+      <td>Toute la journee</td>
+      <td>4000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :crabeneiges %></td>
+      <td>Crabe des Neiges</td>
+      <td>Ocean</td>
+      <td>Nov-Avr</td>
+      <td>Toute la journee</td>
+      <td>4000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :craberouge %></td>
+      <td>Crabe Rouge</td>
+      <td>Ocean</td>
+      <td>Nov-Mars</td>
+      <td>Toute la journee</td>
+      <td>6000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :crevettetigree %></td>
+      <td>Crevette tigree</td>
+      <td>Ocean/Ile</td>
+      <td>Juin-Sep</td>
+      <td>Toute la journee</td>
+      <td>1600</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :crevettemante %></td>
+      <td>Crevette Mante</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>16h-9h</td>
+      <td>1250</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :crevetterouge %></td>
+      <td>Crevette Rouge</td>
+      <td>Ocean</td>
+      <td>Sep-Dec</td>
+      <td>16h-9h</td>
+      <td>650</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :etoilemer %></td>
+      <td>Etoile de mer</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>100</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :homard %></td>
+      <td>Homard</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>2500</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :huitre %></td>
+      <td>Huitre</td>
+      <td>Ocean</td>
+      <td>Sep-Fev</td>
+      <td>Toute la journee</td>
+      <td>400</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :huitreperliere %></td>
+      <td>Huitre Perliere</td>
+      <td>Ocean</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>1600</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :langouste %></td>
+      <td>Langouste</td>
+      <td>Ocean</td>
+      <td>Sep-Dec</td>
+      <td>21h-4h</td>
+      <td>3000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :limacemer %></td>
+      <td>Limace de Mer</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>200</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :limule %></td>
+      <td>Limule</td>
+      <td>Ocean</td>
+      <td>Juil-Sep</td>
+      <td>21h-4h</td>
+      <td>1500</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :nautile %></td>
+      <td>Nautile</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>900</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :ormeau %></td>
+      <td>Ormeau</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>16h-9h</td>
+      <td>400</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :ormeaurouge %></td>
+      <td>Ormeau Rouge</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>16h-9h</td>
+      <td>300</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :oursin %></td>
+      <td>Oursin</td>
+      <td>Ocean/Ile</td>
+      <td>Mai-Sep</td>
+      <td>Toute la journee</td>
+      <td>800</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :palourde %></td>
+      <td>Palourde</td>
+      <td>Ocean</td>
+      <td>Sep-Avr</td>
+      <td>Toute la journee</td>
+      <td>300</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :petoncle %></td>
+      <td>Petoncle</td>
+      <td>Ocean/Ile</td>
+      <td>Toute l'annee</td>
+      <td>Toute la journee</td>
+      <td>1000</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :poulpe %></td>
+      <td>Poulpe</td>
+      <td>Ocean/Ile</td>
+      <td>Mars-Juil/Sep-Jan</td>
+      <td>Toute la journee</td>
+      <td>1200</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :raisinmer %></td>
+      <td>Raisin de Mer</td>
+      <td>Ocean/Ile</td>
+      <td>Juin-Sept</td>
+      <td>Toute la journee</td>
+      <td>600</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :verplat %></td>
+      <td>Ver plat</td>
+      <td>Ocean/Ile</td>
+      <td>Aout-Sep</td>
+      <td>16h-9h</td>
+      <td>200</td>
+    </tr>
+
+    <tr>
+      <td style="text-align:center"><%= f.check_box :wakame %></td>
+      <td>Wakame</td>
+      <td>Ocean/Ile</td>
+      <td>Nov-Juil</td>
+      <td>Toute la journee</td>
+      <td>200</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<br/>
+<input class="btn btn-primary" name="commit" type="submit" value="Mettre a jour">
+<a href="/" class="btn">Retour</a>
+<% end %>
+<% end %>

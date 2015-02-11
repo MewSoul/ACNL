@@ -1,0 +1,6 @@
+<h3 style="margin-top: 50px">Mot de passe oublié ?</h3>
+<%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
+<%= devise_error_messages! %>
+<div>Email<br/><%= f.email_field :email, :autofocus => true %> </div>
+<div><input class="btn btn-primary" name="commit" type="submit" value="Renouveler le mot de passe"></div>
+<% end %>
